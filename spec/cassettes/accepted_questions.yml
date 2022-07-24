@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://leetcode.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query problemsetQuestionList($filters: QuestionListFilterInput)
+        {\n  problemsetQuestionList: questionList(\n    categorySlug: \"algorithms\",\n    limit:
+        -1,\n    skip: 0,\n    filters: $filters\n  ) {\n    total: totalNum\n    questions:
+        data {\n      acRate\n      difficulty\n      freqBar\n      frontendQuestionId:
+        questionFrontendId\n      isFavor\n      paidOnly: isPaidOnly\n      status\n      title\n      titleSlug\n      topicTags
+        {\n        name\n        id\n        slug\n      }\n      hasSolution\n      hasVideoSolution\n    }\n  }\n}\n","variables":{"filters":{"status":"AC"}}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Cookie:
+      - "<Cookie>"
+      Referer:
+      - https://leetcode.com
+      X-Csrftoken:
+      - "<X-Csrftoken>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 24 Jul 2022 18:54:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - DENY
+      Set-Cookie:
+      - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
+        expires=Sun, 23 Jul 2023 18:54:42 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Security-Policy:
+      - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FV3TTC3svwlfZWsHruc5c8va5UzZT2p1qU85b7T8AViNg4fhJmnUwldeulRvRDMznSVvtKOrLiNtysT51QYk7PwxdBiLUoF1GmbrI9UFMXtrXGZhEBhPiV%2BHrQ6xvg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 72feddaa0c6718ce-SIN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"problemsetQuestionList":{"total":23,"questions":[{"acRate":48.870818028345816,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"1","isFavor":false,"paidOnly":false,"status":"ac","title":"Two
+        Sum","titleSlug":"two-sum","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":39.13712743897537,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"2","isFavor":false,"paidOnly":false,"status":"ac","title":"Add
+        Two Numbers","titleSlug":"add-two-numbers","topicTags":[{"name":"Linked List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Math","id":"VG9waWNUYWdOb2RlOjg=","slug":"math"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":33.538896944660735,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"3","isFavor":false,"paidOnly":false,"status":"ac","title":"Longest
+        Substring Without Repeating Characters","titleSlug":"longest-substring-without-repeating-characters","topicTags":[{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Sliding
+        Window","id":"VG9waWNUYWdOb2RlOjU1ODIx","slug":"sliding-window"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":31.655809267310385,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"15","isFavor":false,"paidOnly":false,"status":"ac","title":"3Sum","titleSlug":"3sum","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Two
+        Pointers","id":"VG9waWNUYWdOb2RlOjk=","slug":"two-pointers"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":40.85257090752986,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"20","isFavor":false,"paidOnly":false,"status":"ac","title":"Valid
+        Parentheses","titleSlug":"valid-parentheses","topicTags":[{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Stack","id":"VG9waWNUYWdOb2RlOjE1","slug":"stack"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":61.08783457006469,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"21","isFavor":false,"paidOnly":false,"status":"ac","title":"Merge
+        Two Sorted Lists","titleSlug":"merge-two-sorted-lists","topicTags":[{"name":"Linked
+        List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":49.74062337993034,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"53","isFavor":false,"paidOnly":false,"status":"ac","title":"Maximum
+        Subarray","titleSlug":"maximum-subarray","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Divide
+        and Conquer","id":"VG9waWNUYWdOb2RlOjEy","slug":"divide-and-conquer"},{"name":"Dynamic
+        Programming","id":"VG9waWNUYWdOb2RlOjEz","slug":"dynamic-programming"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":37.670386245084224,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"57","isFavor":false,"paidOnly":false,"status":"ac","title":"Insert
+        Interval","titleSlug":"insert-interval","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":49.14035299279288,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"73","isFavor":false,"paidOnly":false,"status":"ac","title":"Set
+        Matrix Zeroes","titleSlug":"set-matrix-zeroes","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"Matrix","id":"VG9waWNUYWdOb2RlOjYxMDUz","slug":"matrix"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":67.42763044107024,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"118","isFavor":false,"paidOnly":false,"status":"ac","title":"Pascal''s
+        Triangle","titleSlug":"pascals-triangle","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Dynamic
+        Programming","id":"VG9waWNUYWdOb2RlOjEz","slug":"dynamic-programming"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":54.340234766046706,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"121","isFavor":false,"paidOnly":false,"status":"ac","title":"Best
+        Time to Buy and Sell Stock","titleSlug":"best-time-to-buy-and-sell-stock","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Dynamic
+        Programming","id":"VG9waWNUYWdOb2RlOjEz","slug":"dynamic-programming"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":42.59874921184659,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"125","isFavor":false,"paidOnly":false,"status":"ac","title":"Valid
+        Palindrome","titleSlug":"valid-palindrome","topicTags":[{"name":"Two Pointers","id":"VG9waWNUYWdOb2RlOjk=","slug":"two-pointers"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":63.42659347335904,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"169","isFavor":false,"paidOnly":false,"status":"ac","title":"Majority
+        Element","titleSlug":"majority-element","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"Divide and
+        Conquer","id":"VG9waWNUYWdOb2RlOjEy","slug":"divide-and-conquer"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"},{"name":"Counting","id":"VG9waWNUYWdOb2RlOjYxMDYy","slug":"counting"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":71.32945421551055,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"206","isFavor":false,"paidOnly":false,"status":"ac","title":"Reverse
+        Linked List","titleSlug":"reverse-linked-list","topicTags":[{"name":"Linked
+        List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":61.089440686147256,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"217","isFavor":false,"paidOnly":false,"status":"ac","title":"Contains
+        Duplicate","titleSlug":"contains-duplicate","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":64.3379826424214,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"238","isFavor":false,"paidOnly":false,"status":"ac","title":"Product
+        of Array Except Self","titleSlug":"product-of-array-except-self","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Prefix
+        Sum","id":"VG9waWNUYWdOb2RlOjYxMDY4","slug":"prefix-sum"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":60.882385164649335,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"268","isFavor":false,"paidOnly":false,"status":"ac","title":"Missing
+        Number","titleSlug":"missing-number","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"Math","id":"VG9waWNUYWdOb2RlOjg=","slug":"math"},{"name":"Binary
+        Search","id":"VG9waWNUYWdOb2RlOjEx","slug":"binary-search"},{"name":"Bit Manipulation","id":"VG9waWNUYWdOb2RlOjE5","slug":"bit-manipulation"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":75.48797783859969,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"344","isFavor":false,"paidOnly":false,"status":"ac","title":"Reverse
+        String","titleSlug":"reverse-string","topicTags":[{"name":"Two Pointers","id":"VG9waWNUYWdOb2RlOjk=","slug":"two-pointers"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":54.21452651553385,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"409","isFavor":false,"paidOnly":false,"status":"ac","title":"Longest
+        Palindrome","titleSlug":"longest-palindrome","topicTags":[{"name":"Hash Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Greedy","id":"VG9waWNUYWdOb2RlOjE3","slug":"greedy"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":51.92957325188594,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"792","isFavor":false,"paidOnly":false,"status":"ac","title":"Number
+        of Matching Subsequences","titleSlug":"number-of-matching-subsequences","topicTags":[{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Trie","id":"VG9waWNUYWdOb2RlOjI3","slug":"trie"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":33.30854554330673,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"1353","isFavor":false,"paidOnly":false,"status":"ac","title":"Maximum
+        Number of Events That Can Be Attended","titleSlug":"maximum-number-of-events-that-can-be-attended","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Greedy","id":"VG9waWNUYWdOb2RlOjE3","slug":"greedy"},{"name":"Heap
+        (Priority Queue)","id":"VG9waWNUYWdOb2RlOjYxMDUw","slug":"heap-priority-queue"}],"hasSolution":false,"hasVideoSolution":false},{"acRate":36.523654108178334,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"1996","isFavor":false,"paidOnly":false,"status":"ac","title":"The
+        Number of Weak Characters in the Game","titleSlug":"the-number-of-weak-characters-in-the-game","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Stack","id":"VG9waWNUYWdOb2RlOjE1","slug":"stack"},{"name":"Greedy","id":"VG9waWNUYWdOb2RlOjE3","slug":"greedy"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"},{"name":"Monotonic
+        Stack","id":"VG9waWNUYWdOb2RlOjYxMDU0","slug":"monotonic-stack"}],"hasSolution":true,"hasVideoSolution":false}]}}}'
+  recorded_at: Sun, 24 Jul 2022 18:54:42 GMT
+recorded_with: VCR 6.1.0

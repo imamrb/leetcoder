@@ -3,7 +3,7 @@ require:
   - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.1.1
   NewCops: enable
   SuggestExtensions: false
   Exclude:
@@ -11,26 +11,40 @@ AllCops:
     - tmp/**/*
 
 Layout/SpaceInsideHashLiteralBraces:
-  EnforcedStyle: no_space
+  EnforcedStyle: space
 
 Metrics/BlockLength:
   Max: 36
   Exclude:
     - spec/**/*.rb
     - leet_coder.gemspec
+  IgnoredMethods:
+    - configure
 
 Metrics/BlockNesting:
   Max: 2
 
-RSpec/DescribeClass:
-  Enabled: false
+RSpec/ContextWording:
+  Prefixes:
+    - for
+    - when
+    - with
+    - without
 
-Layout/LineLength:
-  AllowURI: true
+Metrics/AbcSize:
+  IgnoredMethods:
+    - change
+    - query
 
 Metrics/MethodLength:
   CountComments: false
   Max: 15
+  IgnoredMethods:
+    - change
+    - up
+
+Layout/LineLength:
+  AllowURI: true
 
 Metrics/ModuleLength:
   Max: 120
@@ -64,9 +78,6 @@ Style/TrailingCommaInHashLiteral:
 Style/Documentation:
   Enabled: false
 
-RSpec/MultipleExpectations:
-  Max: 30
-
 RSpec/ExampleLength:
   Max: 35
 
@@ -75,3 +86,15 @@ RSpec/FilePath:
 
 RSpec/MultipleMemoizedHelpers:
   Max: 10
+
+RSpec/DescribeClass:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 6
+
+RSpec/MultipleExpectations:
+  Max: 10
+
+RSpec/RepeatedExampleGroupBody:
+  Enabled: false

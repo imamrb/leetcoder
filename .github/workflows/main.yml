@@ -15,15 +15,18 @@ jobs:
       matrix:
         ruby:
           - '3.1.1'
+ 
+    env:
+      LEETCODE_COOKIE: ${{ secrets.LEETCODE_COOKIE }}
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true
-    - name: Run Specs
-      run: bundle exec rake
-    - name: Run RuboCop
-      run: bundle exec rubocop --config .rubocop.yml --parallel
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run Specs
+        run: bundle exec rake
+      - name: Run RuboCop
+        run: bundle exec rubocop --config .rubocop.yml --parallel
