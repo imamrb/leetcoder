@@ -1,0 +1,77 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - vendor/**/*
+    - tmp/**/*
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Metrics/BlockLength:
+  Max: 36
+  Exclude:
+    - spec/**/*.rb
+    - leet_coder.gemspec
+
+Metrics/BlockNesting:
+  Max: 2
+
+RSpec/DescribeClass:
+  Enabled: false
+
+Layout/LineLength:
+  AllowURI: true
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 15
+
+Metrics/ModuleLength:
+  Max: 120
+
+Metrics/ClassLength:
+  Max: 120
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+
+Style/CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    collect: 'map'
+    collect!: 'map!'
+    inject: 'reduce'
+    find: 'detect'
+    find_all: 'select'
+    delete: 'gsub'
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: 'no_comma'
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: 'no_comma'
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 30
+
+RSpec/ExampleLength:
+  Max: 35
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Max: 10
