@@ -15,6 +15,7 @@ jobs:
       matrix:
         ruby:
           - '3.1.1'
+ 
     env:
       LEETCODE_COOKIE: ${{ secrets.LEETCODE_COOKIE }}
 

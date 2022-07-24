@@ -19,7 +19,7 @@ end
 # test
 group :test do
   gem 'rspec', '~> 3.11'
-  gem 'rubocop', '~> 1.31'
+  gem 'rubocop', '~> 1.32'
   gem 'rubocop-performance', '~> 1.14'
   gem 'rubocop-rspec', '~> 2.12'
   gem 'vcr', '~> 6.1'
