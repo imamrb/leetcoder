@@ -7,19 +7,21 @@ gemspec
 
 gem 'rake', '~> 13.0'
 
-gem 'faraday'
-gem 'nokogiri'
+gem 'dotenv'
+gem 'faraday', '~> 1.10'
+gem 'nokogiri', '~> 1.13'
 
-group :development do
+group :development, :test do
   gem 'awesome_print'
-  gem 'dotenv'
   gem 'pry'
 end
 
 # test
 group :test do
-  gem 'rspec', '~> 3.11.0'
-  gem 'rubocop', '~> 1.31.1'
-  gem 'rubocop-performance', '~> 1.14.3'
-  gem 'rubocop-rspec', '~> 2.12.1'
+  gem 'rspec', '~> 3.11'
+  gem 'rubocop', '~> 1.31'
+  gem 'rubocop-performance', '~> 1.14'
+  gem 'rubocop-rspec', '~> 2.12'
+  gem 'vcr', '~> 6.1'
+  gem 'webmock', '~> 3.14'
 end

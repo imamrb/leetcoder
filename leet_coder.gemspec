@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Download all your leetcode accepted submissions categorized by problem tags'
   spec.homepage = 'https://www.github.com/imamrb/leet_coder'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.7.0'
+  spec.required_ruby_version = '>= 3.1.1'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
