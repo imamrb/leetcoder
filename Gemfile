@@ -10,7 +10,7 @@ gem 'rake', '~> 13.0'
 gem 'faraday'
 gem 'nokogiri'
 
-group :development do 
+group :development do
   gem 'awesome_print'
   gem 'dotenv'
   gem 'pry'
