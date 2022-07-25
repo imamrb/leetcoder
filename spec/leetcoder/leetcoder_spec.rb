@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Leetcode do
+RSpec.describe Leetcoder do
   it 'has a version number' do
-    expect(Leetcode::VERSION).not_to be_nil
+    expect(Leetcoder::VERSION).not_to be_nil
   end
 
   it 'does something useful' do

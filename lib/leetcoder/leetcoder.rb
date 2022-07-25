@@ -13,7 +13,7 @@ require 'awesome_print'
 require 'fileutils'
 require 'nokogiri'
 
-module Leetcode
+module Leetcoder
   class Error < StandardError; end
   # Your code goes here...
 end

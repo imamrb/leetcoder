@@ -1,4 +1,4 @@
-name: Leetcoder CI
+name: Leetcoderr CI
 
 on:
   push:
