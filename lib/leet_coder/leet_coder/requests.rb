@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module LeetCoder
+module Leetcode
   class Requests
-    include LeetCoder::Queries
+    include Leetcode::Queries
 
     def initialize
       @client = Client.new
