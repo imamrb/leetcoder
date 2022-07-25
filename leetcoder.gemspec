@@ -4,7 +4,7 @@ require_relative 'lib/leetcoder/leetcoder/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'leetcoder'
-  spec.version = Leetcode::VERSION
+  spec.version = Leetcoder::VERSION
   spec.authors = ['Imam Hossain']
   spec.email = ['imam.swe@gmail.com']
 
