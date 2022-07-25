@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'lib/leet_coder/leet_coder/version'
+require_relative 'lib/leetcoder/leetcoder/version'
 
 Gem::Specification.new do |spec|
   spec.name = 'leetcoder'
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'Download all your leetcode accepted submissions categorized by problem tags'
   spec.description = 'Download all your leetcode accepted submissions categorized by problem tags'
-  spec.homepage = 'https://www.github.com/imamrb/leet_coder'
+  spec.homepage = 'https://www.github.com/imamrb/leetcoder'
   spec.license = 'MIT'
   spec.required_ruby_version = ">= #{File.read('.ruby-version')}"
 
