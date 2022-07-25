@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module LeetCoder
+module Leetcoder
   class Client
-    class LeetCoderError < StandardError; end
+    class LeetcoderError < StandardError; end
 
     BASE_URL = 'https://leetcode.com'
 
@@ -37,7 +37,7 @@ module LeetCoder
     end
 
     def error_handler(response)
-      raise LeetCoderError, "status_code : #{response.status}, " \
+      raise LeetcoderError, "status_code : #{response.status}, " \
                             "response: #{response.inspect.gsub(/"Cookie.*?",/, '<cookie>')}"
     end
   end

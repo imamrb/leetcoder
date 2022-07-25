@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe LeetCoder::Requests do
+RSpec.describe Leetcoder::Requests do
   let!(:instance) { described_class.new }
 
   describe '.submission_detail' do

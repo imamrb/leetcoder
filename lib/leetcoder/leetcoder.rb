@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-Dir[File.join(__dir__, 'leet_coder', '*.rb')].each { |file| require file }
+Dir[File.join(__dir__, 'leetcoder', '*.rb')].each { |file| require file }
 
 require 'dotenv/load'
 
@@ -13,7 +13,7 @@ require 'awesome_print'
 require 'fileutils'
 require 'nokogiri'
 
-module LeetCoder
+module Leetcoder
   class Error < StandardError; end
   # Your code goes here...
 end

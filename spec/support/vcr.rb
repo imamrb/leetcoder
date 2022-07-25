@@ -27,6 +27,10 @@ VCR.configure do |c|
     end
   end
 
+  c.filter_sensitive_data('<Set-Cookie>') do |interaction|
+    interaction.response.headers['Set-Cookie'].first
+  end
+
   c.configure_rspec_metadata!
 
   vcr_mode = ENV['VCR_MODE']&.match?(/all/i) ? :all : :once

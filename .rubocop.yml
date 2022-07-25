@@ -17,7 +17,7 @@ Metrics/BlockLength:
   Max: 36
   Exclude:
     - spec/**/*.rb
-    - leet_coder.gemspec
+    - leetcoder.gemspec
   IgnoredMethods:
     - configure
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module LeetCoder
+module Leetcoder
   module Queries
     def problemset_query(args = {})
       <<~GQL

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'leet_coder/leet_coder'
+require 'leetcoder/leetcoder'
 
 Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |f| require f }
 
