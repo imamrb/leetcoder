@@ -24,29 +24,17 @@ module Leetcoder
       end
     end
 
-    def gql_request(query: {}, variables: {})
-      payload = { query:, variables: }
-      @client.call('post', 'graphql', payload:)
-    end
-
     def get_request(endpoint, params: {})
       @client.call('get', endpoint, params:)
     end
 
-    # def submission_detail(submission_id:)
-    #   endpoint = "submissions/detail/#{submission_id}/"
-    #   @client.call('get', endpoint)
-    # end
+    def post_request(endpoint, payload: {}, params: {})
+      @client.call('post', endpoint, payload:, params:)
+    end
 
-    # def submissions(question_slug:)
-    #   payload = { query: submissions_query(question_slug:) }
-    #   @client.call('post', 'graphql', payload:)
-    # end
-
-    # def question_list
-    #   payload = { query: problemset_query }
-    #   @client.call('post', 'graphql', payload:)
-    # end
+    def gql_request(query: {}, variables: {})
+      @client.call('post', 'graphql', payload: { query:, variables: })
+    end
 
     # def accepted_questions
     #   payload = { query: problemset_query, variables: { filters: { status: 'AC' } } }
