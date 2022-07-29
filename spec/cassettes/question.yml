@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://leetcode.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query questionData {\n  question(titleSlug: \"two-sum\")
+        {\n    questionId\n    title\n    titleSlug\n    content\n    difficulty\n    categoryTitle\n    stats\n    topicTags
+        {\n      name\n      slug\n      translatedName\n    }\n    likes dislikes
+        isLiked similarQuestions exampleTestcases\n  }\n}\n","variables":{}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Cookie:
+      - "<Cookie>"
+      Referer:
+      - https://leetcode.com
+      X-Csrftoken:
+      - "<X-Csrftoken>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 29 Jul 2022 21:00:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - DENY
+      Set-Cookie:
+      - "<Set-Cookie>"
+      - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
+        expires=Fri, 28 Jul 2023 21:00:24 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Security-Policy:
+      - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Fy1gTiKANEX2LNnZY2ZJwFm0cUY92unudQ5jtKmb02xMistyKMnPGbX9timxGQ3Tt7tJF0p74neES4f4AI%2Bk2HOybliVX0w2e5xcoLHNBZF3xRlCsVz4o%2BJ0RVtSNA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7328c8ab1e9c8578-BOM
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"question":{"questionId":"1","title":"Two Sum","titleSlug":"two-sum","content":"<p>Given
+        an array of integers <code>nums</code>&nbsp;and an integer <code>target</code>,
+        return <em>indices of the two numbers such that they add up to <code>target</code></em>.</p>\n\n<p>You
+        may assume that each input would have <strong><em>exactly</em> one solution</strong>,
+        and you may not use the <em>same</em> element twice.</p>\n\n<p>You can return
+        the answer in any order.</p>\n\n<p>&nbsp;</p>\n<p><strong>Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong>
+        nums = [2,7,11,15], target = 9\n<strong>Output:</strong> [0,1]\n<strong>Explanation:</strong>
+        Because nums[0] + nums[1] == 9, we return [0, 1].\n</pre>\n\n<p><strong>Example
+        2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,4], target =
+        6\n<strong>Output:</strong> [1,2]\n</pre>\n\n<p><strong>Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong>
+        nums = [3,3], target = 6\n<strong>Output:</strong> [0,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2
+        &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup>
+        &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-10<sup>9</sup>
+        &lt;= target &lt;= 10<sup>9</sup></code></li>\n\t<li><strong>Only one valid
+        answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can
+        you come up with an algorithm that is less than&nbsp;<code>O(n<sup>2</sup>)&nbsp;</code>time
+        complexity?","difficulty":"Easy","categoryTitle":"Algorithms","stats":"{\"totalAccepted\":
+        \"7.3M\", \"totalSubmission\": \"14.9M\", \"totalAcceptedRaw\": 7291536, \"totalSubmissionRaw\":
+        14913937, \"acRate\": \"48.9%\"}","topicTags":[{"name":"Array","slug":"array","translatedName":null},{"name":"Hash
+        Table","slug":"hash-table","translatedName":null}],"likes":35369,"dislikes":1119,"isLiked":null,"similarQuestions":"[{\"title\":
+        \"3Sum\", \"titleSlug\": \"3sum\", \"difficulty\": \"Medium\", \"translatedTitle\":
+        null}, {\"title\": \"4Sum\", \"titleSlug\": \"4sum\", \"difficulty\": \"Medium\",
+        \"translatedTitle\": null}, {\"title\": \"Two Sum II - Input Array Is Sorted\",
+        \"titleSlug\": \"two-sum-ii-input-array-is-sorted\", \"difficulty\": \"Medium\",
+        \"translatedTitle\": null}, {\"title\": \"Two Sum III - Data structure design\",
+        \"titleSlug\": \"two-sum-iii-data-structure-design\", \"difficulty\": \"Easy\",
+        \"translatedTitle\": null}, {\"title\": \"Subarray Sum Equals K\", \"titleSlug\":
+        \"subarray-sum-equals-k\", \"difficulty\": \"Medium\", \"translatedTitle\":
+        null}, {\"title\": \"Two Sum IV - Input is a BST\", \"titleSlug\": \"two-sum-iv-input-is-a-bst\",
+        \"difficulty\": \"Easy\", \"translatedTitle\": null}, {\"title\": \"Two Sum
+        Less Than K\", \"titleSlug\": \"two-sum-less-than-k\", \"difficulty\": \"Easy\",
+        \"translatedTitle\": null}, {\"title\": \"Max Number of K-Sum Pairs\", \"titleSlug\":
+        \"max-number-of-k-sum-pairs\", \"difficulty\": \"Medium\", \"translatedTitle\":
+        null}, {\"title\": \"Count Good Meals\", \"titleSlug\": \"count-good-meals\",
+        \"difficulty\": \"Medium\", \"translatedTitle\": null}, {\"title\": \"Count
+        Number of Pairs With Absolute Difference K\", \"titleSlug\": \"count-number-of-pairs-with-absolute-difference-k\",
+        \"difficulty\": \"Easy\", \"translatedTitle\": null}, {\"title\": \"Number
+        of Pairs of Strings With Concatenation Equal to Target\", \"titleSlug\": \"number-of-pairs-of-strings-with-concatenation-equal-to-target\",
+        \"difficulty\": \"Medium\", \"translatedTitle\": null}, {\"title\": \"Find
+        All K-Distant Indices in an Array\", \"titleSlug\": \"find-all-k-distant-indices-in-an-array\",
+        \"difficulty\": \"Easy\", \"translatedTitle\": null}, {\"title\": \"First
+        Letter to Appear Twice\", \"titleSlug\": \"first-letter-to-appear-twice\",
+        \"difficulty\": \"Easy\", \"translatedTitle\": null}, {\"title\": \"Number
+        of Excellent Pairs\", \"titleSlug\": \"number-of-excellent-pairs\", \"difficulty\":
+        \"Hard\", \"translatedTitle\": null}]","exampleTestcases":"[2,7,11,15]\n9\n[3,2,4]\n6\n[3,3]\n6"}}}'
+  recorded_at: Fri, 29 Jul 2022 21:00:24 GMT
+recorded_with: VCR 6.1.0

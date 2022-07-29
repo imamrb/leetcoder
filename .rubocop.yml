@@ -67,7 +67,7 @@ Style/CollectionMethods:
     delete: 'gsub'
 
 Layout/DotPosition:
-  EnforcedStyle: trailing
+  EnforcedStyle: leading
 
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: 'no_comma'
@@ -76,6 +76,9 @@ Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: 'no_comma'
 
 Style/Documentation:
+  Enabled: false
+
+Style/OpenStructUse:
   Enabled: false
 
 RSpec/ExampleLength:

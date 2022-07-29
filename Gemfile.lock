@@ -2,6 +2,9 @@ PATH
   remote: .
   specs:
     leetcoder (0.1.0)
+      dotenv (~> 2.7.6)
+      faraday (~> 1.10)
+      nokogiri (~> 1.13)
 
 GEM
   remote: https://rubygems.org/
@@ -105,10 +108,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
-  dotenv
-  faraday (~> 1.10)
   leetcoder!
-  nokogiri (~> 1.13)
   pry
   rake (~> 13.0)
   rspec (~> 3.11)
