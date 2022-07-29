@@ -5,7 +5,7 @@ module Leetcoder
     def list
       request = proc { gql_request(query: problemset_query, variables: { filters: {} }) }
 
-      response = cache_response('questions_cache.yml', request, update: true)
+      response = cache_response('questions_cache.yml', request, update: false)
       Collection.from_response(response.body, key: %i[data problemsetQuestionList questions])
     end
 
