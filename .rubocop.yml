@@ -78,6 +78,9 @@ Style/TrailingCommaInHashLiteral:
 Style/Documentation:
   Enabled: false
 
+Style/OpenStructUse:
+  Enabled: false
+
 RSpec/ExampleLength:
   Max: 35
 

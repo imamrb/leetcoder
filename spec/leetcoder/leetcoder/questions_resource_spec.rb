@@ -28,4 +28,3 @@ RSpec.describe Leetcoder::QuestionsResource do
     end
   end
 end
-
