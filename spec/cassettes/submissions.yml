@@ -6,8 +6,8 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"query":"query Submissions {\n  submissionList(\n    questionSlug:
-        \"longest-substring-without-repeating-characters\",\n    limit: 1000,\n    offset:
-        0\n  ) {\n    lastKey\n    hasNext\n    submissions {\n      id\n      statusDisplay\n      lang\n      runtime\n      timestamp\n      url\n      isPending\n      memory\n    }\n  }\n}\n"}'
+        \"two-sum\",\n    limit: 1000,\n    offset: 0\n  ) {\n    lastKey\n    hasNext\n    submissions
+        {\n      id\n      statusDisplay\n      lang\n      runtime\n      timestamp\n      url\n      isPending\n      memory\n    }\n  }\n}\n","variables":{}}'
     headers:
       User-Agent:
       - Faraday v1.10.0
@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 25 Jul 2022 20:29:12 GMT
+      - Fri, 29 Jul 2022 21:00:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -43,7 +43,7 @@ http_interactions:
       Set-Cookie:
       - "<Set-Cookie>"
       - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
-        expires=Mon, 24 Jul 2023 20:29:12 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
+        expires=Fri, 28 Jul 2023 21:00:26 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
         Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
@@ -54,7 +54,7 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mOWRhPKkuguIK%2B%2FNXHdb7HXWj1NQQeLuj98XgnGSrQDCapiWcQvBrVqt5RvqnIeJ%2FJ%2FWbu2OwWCW6%2F53CrE%2FBWVweQIvdzEHT4wo94T2j66DCS%2F8isR47KkJSDJqTQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zjFgHRYDBOegu13uwnmiWvT6hgyTyH%2FqRPLQ25q9Yt3imVDIlPQMPF1iIH5KMF53QezgNmyzdJocS7eSgBUqWY2ah3a9IKGZb1kiaVoFkDojk%2F0DGDikDqeaeIuqKQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       X-Content-Type-Options:
@@ -62,16 +62,18 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7307a576887e6c21-SIN
+      - 7328c8baa9ff84e9-BOM
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"submissionList":{"lastKey":null,"hasNext":false,"submissions":[{"id":"754330628","statusDisplay":"Accepted","lang":"cpp","runtime":"4
-        ms","timestamp":"1658563586","url":"/submissions/detail/754330628/","isPending":"Not
-        Pending","memory":"8.3 MB"},{"id":"753219274","statusDisplay":"Accepted","lang":"cpp","runtime":"12
-        ms","timestamp":"1658436921","url":"/submissions/detail/753219274/","isPending":"Not
-        Pending","memory":"6.9 MB"},{"id":"753215751","statusDisplay":"Accepted","lang":"cpp","runtime":"3
-        ms","timestamp":"1658436539","url":"/submissions/detail/753215751/","isPending":"Not
-        Pending","memory":"6.9 MB"},{"id":"753214471","statusDisplay":"Wrong Answer","lang":"cpp","runtime":"N/A","timestamp":"1658436402","url":"/submissions/detail/753214471/","isPending":"Not
-        Pending","memory":"N/A"}]}}}'
-  recorded_at: Mon, 25 Jul 2022 20:29:12 GMT
+      string: '{"data":{"submissionList":{"lastKey":null,"hasNext":false,"submissions":[{"id":"641132932","statusDisplay":"Accepted","lang":"ruby","runtime":"127
+        ms","timestamp":"1644830236","url":"/submissions/detail/641132932/","isPending":"Not
+        Pending","memory":"211.6 MB"},{"id":"641119119","statusDisplay":"Wrong Answer","lang":"ruby","runtime":"N/A","timestamp":"1644828095","url":"/submissions/detail/641119119/","isPending":"Not
+        Pending","memory":"N/A"},{"id":"429871473","statusDisplay":"Accepted","lang":"cpp","runtime":"8
+        ms","timestamp":"1607784935","url":"/submissions/detail/429871473/","isPending":"Not
+        Pending","memory":"9.3 MB"},{"id":"429871065","statusDisplay":"Accepted","lang":"cpp","runtime":"20
+        ms","timestamp":"1607784868","url":"/submissions/detail/429871065/","isPending":"Not
+        Pending","memory":"9.4 MB"},{"id":"429869587","statusDisplay":"Accepted","lang":"cpp","runtime":"16
+        ms","timestamp":"1607784616","url":"/submissions/detail/429869587/","isPending":"Not
+        Pending","memory":"9.3 MB"}]}}}'
+  recorded_at: Fri, 29 Jul 2022 21:00:27 GMT
 recorded_with: VCR 6.1.0
