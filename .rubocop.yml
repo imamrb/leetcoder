@@ -67,7 +67,7 @@ Style/CollectionMethods:
     delete: 'gsub'
 
 Layout/DotPosition:
-  EnforcedStyle: trailing
+  EnforcedStyle: leading
 
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: 'no_comma'

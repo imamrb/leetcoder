@@ -5,15 +5,10 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in leetcoder.gemspec
 gemspec
 
-gem 'rake', '~> 13.0'
-
-gem 'dotenv'
-gem 'faraday', '~> 1.10'
-gem 'nokogiri', '~> 1.13'
-
 group :development, :test do
   gem 'awesome_print'
   gem 'pry'
+  gem 'rake', '~> 13.0'
 end
 
 # test

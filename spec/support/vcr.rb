@@ -37,7 +37,7 @@ VCR.configure do |c|
 
   c.default_cassette_options = {
     record: vcr_mode,
-    match_requests_on: %i[method uri]
+    match_requests_on: %i[method uri body]
   }
 end
 
