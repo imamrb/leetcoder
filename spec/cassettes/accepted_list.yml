@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://leetcode.com/graphql
+    body:
+      encoding: UTF-8
+      string: '{"query":"query problemsetQuestionList($filters: QuestionListFilterInput)
+        {\n  problemsetQuestionList: questionList(\n    categorySlug: \"algorithms\",\n    limit:
+        5,\n    skip: 0,\n    filters: $filters\n  ) {\n    total: totalNum\n    questions:
+        data {\n      acRate\n      difficulty\n      freqBar\n      frontendQuestionId:
+        questionFrontendId\n      isFavor\n      paidOnly: isPaidOnly\n      status\n      title\n      titleSlug\n      topicTags
+        {\n        name\n        id\n        slug\n      }\n      hasSolution\n      hasVideoSolution\n    }\n  }\n}\n","variables":{"filters":{"status":"AC"}}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.0
+      Cookie:
+      - "<Cookie>"
+      Referer:
+      - https://leetcode.com
+      X-Csrftoken:
+      - "<X-Csrftoken>"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 03 Aug 2022 21:32:52 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Cookie
+      X-Frame-Options:
+      - DENY
+      Set-Cookie:
+      - "<Set-Cookie>"
+      - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
+        expires=Wed, 02 Aug 2023 21:32:52 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Content-Security-Policy:
+      - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TAnPTXpzEJg8eJthwaGZhSBwRsE3BTShFx7SFYKvwDRfP11mUAucVKi5U%2FeSFqwLy0wyILHI0eLgUeZpXowIIYpWvJR5naKjFq4eL1fVI0pYUu9RPmqFC%2Bz7w2PVdg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 73522b19a827471b-SIN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":{"problemsetQuestionList":{"total":23,"questions":[{"acRate":48.91465900741825,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"1","isFavor":false,"paidOnly":false,"status":"ac","title":"Two
+        Sum","titleSlug":"two-sum","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":39.202571542431436,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"2","isFavor":false,"paidOnly":false,"status":"ac","title":"Add
+        Two Numbers","titleSlug":"add-two-numbers","topicTags":[{"name":"Linked List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Math","id":"VG9waWNUYWdOb2RlOjg=","slug":"math"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":33.569870143089325,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"3","isFavor":false,"paidOnly":false,"status":"ac","title":"Longest
+        Substring Without Repeating Characters","titleSlug":"longest-substring-without-repeating-characters","topicTags":[{"name":"Hash
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Sliding
+        Window","id":"VG9waWNUYWdOb2RlOjU1ODIx","slug":"sliding-window"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":31.729634300425737,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"15","isFavor":false,"paidOnly":false,"status":"ac","title":"3Sum","titleSlug":"3sum","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Two
+        Pointers","id":"VG9waWNUYWdOb2RlOjk=","slug":"two-pointers"},{"name":"Sorting","id":"VG9waWNUYWdOb2RlOjYxMDQ5","slug":"sorting"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":40.83486400368279,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"20","isFavor":false,"paidOnly":false,"status":"ac","title":"Valid
+        Parentheses","titleSlug":"valid-parentheses","topicTags":[{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Stack","id":"VG9waWNUYWdOb2RlOjE1","slug":"stack"}],"hasSolution":true,"hasVideoSolution":true}]}}}'
+  recorded_at: Wed, 03 Aug 2022 21:32:52 GMT
+recorded_with: VCR 6.1.0

@@ -2,12 +2,14 @@
 
 module Leetcoder
   module GqlQueries
+    def default_limit = ENV['TEST'] ? 5 : -1
+
     def problemset_query(args = {})
       <<~GQL
         query problemsetQuestionList($filters: QuestionListFilterInput) {
           problemsetQuestionList: questionList(
             categorySlug: "#{args.fetch(:categorySlug, 'algorithms')}",
-            limit: #{args.fetch(:limit, -1)},
+            limit: #{args.fetch(:limit, default_limit)},
             skip: #{args.fetch(:skip, 0)},
             filters: $filters
           ) {
@@ -62,7 +64,7 @@ module Leetcoder
         query Submissions {
           submissionList(
             questionSlug: "#{args[:title_slug]}",
-            limit: #{args.fetch(:limit, 1000)},
+            limit: #{args.fetch(:limit, default_limit)},
             offset: #{args.fetch(:skip, 0)}
           ) {
             lastKey

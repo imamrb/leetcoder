@@ -7,8 +7,6 @@ module Leetcoder
   class Client
     class ApiError < StandardError; end
 
-    BASE_URL = 'https://leetcode.com'
-
     def initialize(_args = {})
       @cookie = ENV.fetch('LEETCODE_COOKIE')
     end
@@ -28,7 +26,7 @@ module Leetcoder
     end
 
     def connection
-      @connection ||= Faraday.new(url: BASE_URL) do |f|
+      @connection ||= Faraday.new(url: Leetcoder::BASE_URL) do |f|
         f.request :json
         f.response :json, content_type: /\bjson$/, parser_options: { symbolize_names: true }
         f.request :multipart
@@ -49,15 +47,16 @@ module Leetcoder
 
     def error_handler(response)
       case response.status
-      when 200
-        raise ApiError, 'status: 200, ' \
-                        "message: [ #{concat_gql_errors(response.body[:errors])} ]"
+      when 200, 400
+        raise ApiError, "status: #{response.status},\n" \
+                        "code: GRAPHQL_ERROR, \nerrors: #{response.body[:errors]}"
       when 404
-        raise ApiError, 'status: 404, ' \
-                        "message: The resource you are looking for couldn't be found!"
+        raise ApiError, "status: #{response.status},\n" \
+                        "code: NOT_FOUND_ERROR,\n" \
+                        "errors: [The resource you are looking for couldn't be found!]"
       else
-        raise ApiError, "status: #{response.status}, " \
-                        "response: #{response.inspect.gsub(/"Cookie.*?",/, '<cookie>')}"
+        raise ApiError, "status: #{response.status},\n" \
+                        "full_response: #{response.inspect.gsub(/"Cookie.*?",/, '<cookie>')}"
       end
     end
 
