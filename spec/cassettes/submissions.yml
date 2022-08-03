@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 21:32:44 GMT
+      - Wed, 03 Aug 2022 21:43:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -43,7 +43,7 @@ http_interactions:
       Set-Cookie:
       - "<Set-Cookie>"
       - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
-        expires=Wed, 02 Aug 2023 21:32:44 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
+        expires=Wed, 02 Aug 2023 21:43:02 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
         Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
@@ -54,7 +54,7 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jWdP7IMl17fjrSWdyaNKmkqK4D1ScSMmqNyqQ%2Bj2q55lMjDVSAQg1zn4c%2BsJPTtQaRNgsA7AymqfytQLMz4F9uVVKkpGKQcn3H81kdA%2FouA1%2BkWcMwtZo3hsXiJLaQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RLtJoAsemnMgpta7omVxWHlMel%2FZ48yz2BE0bcO%2B5gj4msS25TKF2iUNxQwEJzlZiy%2Fm8I7Ldg9zzwaz39cNUJ6AdSg5YMsaJQSrNgTT%2BICOQ8auEByddfmDoN5uHg%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       X-Content-Type-Options:
@@ -62,7 +62,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73522ae938dd8938-SIN
+      - 73523a01bc7a87d2-SIN
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"submissionList":{"lastKey":null,"hasNext":false,"submissions":[{"id":"641132932","statusDisplay":"Accepted","lang":"ruby","runtime":"127
@@ -75,5 +75,5 @@ http_interactions:
         Pending","memory":"9.4 MB"},{"id":"429869587","statusDisplay":"Accepted","lang":"cpp","runtime":"16
         ms","timestamp":"1607784616","url":"/submissions/detail/429869587/","isPending":"Not
         Pending","memory":"9.3 MB"}]}}}'
-  recorded_at: Wed, 03 Aug 2022 21:32:44 GMT
+  recorded_at: Wed, 03 Aug 2022 21:43:03 GMT
 recorded_with: VCR 6.1.0

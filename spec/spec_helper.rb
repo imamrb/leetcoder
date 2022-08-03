@@ -5,7 +5,11 @@ require 'leetcoder/leetcoder'
 Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |f| require f }
 ENV['TEST'] = 'true'
 # NOTE: Requires the actual cookie VCR_MODE=all is set
-ENV['LEETCODE_COOKIE'] = ENV['VCR_MODE'].eql?('all') ? ENV.fetch('LEETCODE_COOKIE') : 'FAKE_COOKIE'
+ENV['LEETCODE_COOKIE'] = if ENV['VCR_MODE'].eql?('all')
+                           ENV.fetch('LEETCODE_COOKIE')
+                         else
+                           'csrftoken=4aB9fJwE3hxkolwtcZo; LEETCODE_SESSION=dskjflskjfk'
+                         end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

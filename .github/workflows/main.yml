@@ -17,7 +17,8 @@ jobs:
           - '3.1.1'
 
     env:
-      LEETCODE_COOKIE: ${{ secrets.LEETCODE_COOKIE }}
+      TEST: 'true'
+      LEETCODE_COOKIE: 'csrftoken=4aB9fJwE3hxkolwtcZo; LEETCODE_SESSION=dskjflskjfk;'
 
     steps:
       - uses: actions/checkout@v3
