@@ -13,5 +13,4 @@ module Leetcoder
   class Error < StandardError; end
 
   BASE_URL = 'https://leetcode.com'
-
 end
