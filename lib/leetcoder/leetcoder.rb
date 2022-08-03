@@ -11,5 +11,7 @@ require 'nokogiri'
 
 module Leetcoder
   class Error < StandardError; end
-  # Your code goes here...
+
+  BASE_URL = 'https://leetcode.com'
+
 end
