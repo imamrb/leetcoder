@@ -35,10 +35,5 @@ module Leetcoder
     def gql_request(query: {}, variables: {})
       @client.call('post', 'graphql', payload: { query:, variables: })
     end
-
-    # def accepted_questions
-    #   payload = { query: problemset_query, variables: { filters: { status: 'AC' } } }
-    #   @client.call('post', 'graphql', payload:)
-    # end
   end
 end
