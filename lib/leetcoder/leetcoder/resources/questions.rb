@@ -17,6 +17,7 @@ module Leetcoder
       Collection.from_response(response.body, key: %i[data problemsetQuestionList questions])
     end
 
+    # returns a single problem data
     def retrieve(title_slug)
       response = gql_request(query: question_data_query(title_slug:))
 

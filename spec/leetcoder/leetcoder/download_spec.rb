@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 RSpec.describe Leetcoder::Download do
-  describe '#download_ac_submissions', :vcr do
-    let(:response) { described_class.download_ac_submissions }
+  describe '#call', :vcr do
+    let(:response) { described_class.call }
 
     it 'downloads all accepted submissions' do
       allow(File).to receive(:write).and_return(true)

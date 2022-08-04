@@ -52,6 +52,7 @@ module Leetcoder
       SubmissionsResource.new(title_slug: question.titleSlug).uniq_accepted_list
     end
 
+    # find or create directory and returns the name
     def create_directory(name)
       FileUtils.mkdir_p(name).first
     end

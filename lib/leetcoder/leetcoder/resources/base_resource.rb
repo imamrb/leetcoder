@@ -13,8 +13,10 @@ module Leetcoder
       @args = args
     end
 
-    def cache_response(path, request, update: false)
-      data = YAML.load_file(path) if File.exist? path
+    # @params: file_path:string, request:proc
+    # cache response in file_path and return it
+    def cache_response(file_path, request, update: false)
+      data = YAML.load_file(file_path) if File.exist? file_path
       return Response.new(body: data) unless update || data.nil?
 
       puts 'Caching Response..'

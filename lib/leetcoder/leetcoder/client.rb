@@ -11,13 +11,18 @@ module Leetcoder
       @cookie = ENV.fetch('LEETCODE_COOKIE')
     end
 
-    def call(request_type, endpoint, payload: {}, params: {})  # rubocop:disable Metrics/AbcSize
+    # @params
+    # request_type: [get, post, put, delete]
+    # endpoint: part of the url after base url
+    # payload: request body payload
+    # params: filter params
+    def call(request_type, endpoint, payload: {}, params: {})
       response = connection.public_send(request_type, endpoint) do |req|
         req.body = payload
         req.params = params
         req.headers['Cookie'] = cookie
         req.headers['Referer'] = BASE_URL
-        req.headers['X-csrftoken'] = cookie.match(/(?<=csrftoken=).*?(?=;)/)[0]
+        req.headers['X-csrftoken'] = x_csrftoken
       end
 
       return response if valid_response?(response)
@@ -42,7 +47,15 @@ module Leetcoder
       return false unless (200...399).cover?(response.status)
       return true unless response.body.is_a? Hash
 
-      response.body[:errors].nil?
+      response.body[:errors].nil? # additional check for graphql response
+    end
+
+    # ?<= positive lookbehind ( precedded by )
+    # ?= positivie lookahead ( followed by )
+    # .*? non greedy match ( capture first matched group )
+    def x_csrftoken
+      matched_data = cookie.match(/(?<=csrftoken=).*?(?=;)/)
+      matched_data[0] if matched_data
     end
 
     def error_handler(response)
@@ -58,10 +71,6 @@ module Leetcoder
         raise ApiError, "status: #{response.status},\n" \
                         "full_response: #{response.inspect.gsub(/"Cookie.*?",/, '<cookie>')}"
       end
-    end
-
-    def concat_gql_errors(errors)
-      errors.map { |e| "#{e[:path].join(': ')}: #{e[:message]}" }.join('; ')
     end
   end
 end
