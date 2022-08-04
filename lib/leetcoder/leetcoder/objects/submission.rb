@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'leetcoder/leetcoder/utils'
+require 'leetcoder/leetcoder/helpers/utils'
 
 module Leetcoder
   class Submission < BaseObject
-    include Leetcoder::Utils
+    include Leetcoder::Helpers::Utils
 
     def save_to_file!
       File.write(file_name, code)
@@ -19,10 +19,18 @@ module Leetcoder
     end
 
     def file_name
-      "#{question_id}.solution#{lang_to_ext(lang)}"
+      name_prefix = "#{question_id}.solution#{serial}"
+      # name_prefix += serial if serial
+      "#{name_prefix}.#{lang_to_ext(lang)}"
     end
 
     private
+
+    def serial
+      return nil if args[:index].nil? || args[:index] < 2
+
+      args[:index].to_s
+    end
 
     def lang
       submission_data.scan(/(?<=getLangDisplay: ').*(?=')/).first.strip

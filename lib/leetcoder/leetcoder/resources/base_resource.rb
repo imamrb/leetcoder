@@ -2,7 +2,7 @@
 
 module Leetcoder
   class BaseResource
-    include Leetcoder::GqlQueries
+    include Helpers::GqlQueries
 
     class Response < Object; end
 
