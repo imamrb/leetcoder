@@ -3,53 +3,52 @@
 module Leetcoder
   class Download
     def initialize
-      @q_resource = QuestionsResource.new
+      @question_resource = QuestionsResource.new
       @root_directory = create_directory('leetcoder')
     end
 
-    def self.download_ac_submissions
-      new.download_ac_submissions
+    def self.call
+      new.call
     end
 
-    def download_ac_submissions
+    def call
       Dir.chdir(@root_directory) do
-        download_submissions
+        download_accepted_submissions
       end
     end
 
     private
 
-    def download_submissions
-      accepted_qlist.each do |question|
+    def download_accepted_submissions
+      accepted_questions.each do |question|
         question_dir = "#{question.frontendQuestionId}.#{question.titleSlug}"
+        next if Dir.exit? question_dir
 
         Dir.chdir(create_directory(question_dir)) do
-          next if File.exist?('README.md')
-
           process_question(question)
           process_submissions(question)
         end
       end
     end
 
-    def accepted_qlist
-      @q_resource.accepted_list
+    def accepted_questions
+      @question_resource.accepted_list
     end
 
     def process_question(question)
-      response = @q_resource.retrieve(question.titleSlug)
-      Question.new(response).save_to_file!
+      question_data = @question_resource.retrieve(question.titleSlug)
+      Question.new(question_data).save_to_file!
     end
 
     def process_submissions(question)
-      q_submissions(question).each do |sub|
-        response = SubmissionsResource.new.retrieve(url: sub.url)
+      accepted_submissions(question).each do |sub|
+        submission_data = SubmissionsResource.new.retrieve(url: sub.url)
 
-        Submission.new(response, data: sub).save_to_file!
+        Submission.new(submission_data).save_to_file!
       end
     end
 
-    def q_submissions(question)
+    def accepted_submissions(question)
       SubmissionsResource.new(title_slug: question.titleSlug).uniq_accepted_list
     end
 
