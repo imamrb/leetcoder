@@ -1,14 +1,19 @@
 # frozen_string_literal: true
 
+require_relative 'helpers/logger'
+
 module Leetcoder
   class Download
-    def initialize
+    include Helpers::Logger
+
+    def initialize(args)
+      @args = args
       @question_resource = QuestionsResource.new
       @root_directory = create_directory('leetcoder')
     end
 
-    def self.call
-      new.call
+    def self.call(args = {})
+      new(args).call
     end
 
     def call
@@ -19,10 +24,14 @@ module Leetcoder
 
     private
 
+    attr_reader :args
+
     def download_accepted_submissions
       accepted_questions.each do |question|
         question_dir = "#{question.frontendQuestionId}.#{question.titleSlug}"
-        next if Dir.exit? question_dir
+        next log_message(:skip, question_dir:) if Dir.exist? question_dir
+
+        log_message(:download, question_dir:)
 
         Dir.chdir(create_directory(question_dir)) do
           process_question(question)
@@ -32,24 +41,27 @@ module Leetcoder
     end
 
     def accepted_questions
-      @question_resource.accepted_list
+      QuestionsResource.new.accepted_list
     end
 
     def process_question(question)
-      question_data = @question_resource.retrieve(question.titleSlug)
+      question_data = QuestionsResource.new.retrieve(question.titleSlug)
       Question.new(question_data).save_to_file!
     end
 
     def process_submissions(question)
-      accepted_submissions(question).each do |sub|
+      accepted_submissions(question).each_with_index do |sub, index|
         submission_data = SubmissionsResource.new.retrieve(url: sub.url)
 
-        Submission.new(submission_data).save_to_file!
+        Submission.new(submission_data, index: index + 1).save_to_file!
       end
     end
 
     def accepted_submissions(question)
-      SubmissionsResource.new(title_slug: question.titleSlug).uniq_accepted_list
+      resource = SubmissionsResource.new(title_slug: question.titleSlug)
+      return resource.accepted_list if args[:download_type] == Commands::DOWNLOAD_TYPE_ALL
+
+      resource.uniq_accepted_list # default list
     end
 
     # find or create directory and returns the name
