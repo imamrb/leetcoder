@@ -1,4 +1,4 @@
-# Leetcoder
+# LeetCoder
 
 <!-- ![Leetcoder](/spec/cassettes/leetcoder.png) -->
 <img src="/spec/cassettes/leet_coder.png" alt="leetcoder" float="right" height="300px"/>
