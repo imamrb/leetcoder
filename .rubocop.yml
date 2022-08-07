@@ -9,6 +9,7 @@ AllCops:
   Exclude:
     - vendor/**/*
     - tmp/**/*
+    - leetcode/**/*
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space

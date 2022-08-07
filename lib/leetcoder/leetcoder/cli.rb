@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 require 'optparse'
-require_relative 'helpers/error_hanlder'
 
 module Leetcoder
   class Cli
-    include Helpers::ErrorHanlder
+    include Helpers::ErrorHandler
     attr_reader :args, :commands
 
     def initialize(args)
