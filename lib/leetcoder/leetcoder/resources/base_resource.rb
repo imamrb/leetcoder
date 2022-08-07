@@ -22,7 +22,7 @@ module Leetcoder
       puts 'Caching Response..'
 
       request.call.tap do |response|
-        File.write(path, response.body.to_yaml)
+        File.write(file_path, response.body.to_yaml)
       end
     end
 
