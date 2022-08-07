@@ -10,12 +10,12 @@ module Leetcoder
     end
 
     # # returns the list of all leetcode problems, not usued
-    # def list
-    #   request = proc { gql_request(query: problemset_query, variables: { filters: {} }) }
+    def list
+      request = proc { gql_request(query: problemset_query, variables: { filters: {} }) }
 
-    #   response = cache_response('questions_cache.yml', request, update: false)
-    #   Collection.from_response(response.body, key: %i[data problemsetQuestionList questions])
-    # end
+      response = cache_response('questions_cache.yml', request, update: false)
+      Collection.from_response(response.body, key: %i[data problemsetQuestionList questions])
+    end
 
     # returns a single problem data
     def retrieve(title_slug)
