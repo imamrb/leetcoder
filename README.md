@@ -1,6 +1,7 @@
 # Leetcoder
+
 <!-- ![Leetcoder](/spec/cassettes/leetcoder.png) -->
-<img src="/spec/cassettes/leet_coder.png" alt="leetcoder", align="right"/>
+<img src="/spec/cassettes/leet_coder.png" alt="leetcoder" float="right" height="300px"/>
 
 A Ruby Leetcode Client to help you download all your accepted Leetcode submissions with problem description.
 
