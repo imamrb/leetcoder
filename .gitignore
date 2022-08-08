@@ -11,3 +11,5 @@
 /spec/examples.txt
 .env
 /leetcode
+Gemfile.lock
+*.gem
