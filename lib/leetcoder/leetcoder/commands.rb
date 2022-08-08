@@ -4,6 +4,8 @@ require 'optparse'
 
 module Leetcoder
   class Commands
+    include Helpers::Utils
+
     DOWNLOAD_TYPE_ONE = :one
     DOWNLOAD_TYPE_ALL = :all
 
