@@ -102,3 +102,6 @@ RSpec/MultipleExpectations:
 
 RSpec/RepeatedExampleGroupBody:
   Enabled: false
+
+Gemspec/RequireMFA:
+  Enabled: false
