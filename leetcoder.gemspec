@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors = ['Imam Hossain']
   spec.email = ['imam.swe@gmail.com']
 
-  spec.summary = 'Download all your leetcode accepted submissions categorized by problem tags'
-  spec.description = 'Download all your leetcode accepted submissions categorized by problem tags'
+  spec.summary = 'A Ruby Leetcode Client to help you download and backup all your accepted leetcode submissions'
+  spec.description = 'A Ruby Leetcode Client to download and backup your submissions with problem description'
   spec.homepage = 'https://www.github.com/imamrb/leetcoder'
   spec.license = 'MIT'
   spec.required_ruby_version = ">= #{File.read('.ruby-version')}"
@@ -30,11 +30,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   # Dependency gems
-  spec.add_dependency 'dotenv', '~> 2.7.6'
   spec.add_dependency 'faraday', '~> 1.10'
   spec.add_dependency 'nokogiri', '~> 1.13'
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
-  spec.metadata['rubygems_mfa_required'] = 'true'
+  spec.metadata['rubygems_mfa_required'] = 'false'
 end

@@ -6,9 +6,11 @@ require 'faraday/net_http'
 module Leetcoder
   class Client
     class ApiError < StandardError; end
+    class AuthenticationError < StandardError; end
+    class InvalidCookie < StandardError; end
 
     def initialize(_args = {})
-      @cookie = ENV.fetch('LEETCODE_COOKIE')
+      @cookie = ENV.fetch('LEETCODE_COOKIE', nil) || read_cookie
     end
 
     # @params
@@ -27,7 +29,7 @@ module Leetcoder
 
       return response if valid_response?(response)
 
-      error_handler(response)
+      client_error_handler(response)
     end
 
     def connection
@@ -44,21 +46,28 @@ module Leetcoder
     attr_reader :cookie
 
     def valid_response?(response)
-      return false unless (200...399).cover?(response.status)
+      return false unless (200...299).cover?(response.status)
       return true unless response.body.is_a? Hash
 
       response.body[:errors].nil? # additional check for graphql response
+    end
+
+    def read_cookie
+      Base64.urlsafe_decode64(File.read(COOKIE_FILE))
+    rescue StandardError
+      raise AuthenticationError, 'Authentication Error! Please provide a valid leetcode cookie.'
     end
 
     # ?<= positive lookbehind ( precedded by )
     # ?= positivie lookahead ( followed by )
     # .*? non greedy match ( capture first matched group )
     def x_csrftoken
-      matched_data = cookie.match(/(?<=csrftoken=).*?(?=;)/)
-      matched_data[0] if matched_data
+      cookie.match(/(?<=csrftoken=).*?(?=;)/)[0]
+    rescue StandardError
+      raise InvalidCookie, 'The cookie you entered is not valid. Please provide a valid leetcode cookie.'
     end
 
-    def error_handler(response)
+    def client_error_handler(response)
       case response.status
       when 200, 400
         raise ApiError, "status: #{response.status},\n" \

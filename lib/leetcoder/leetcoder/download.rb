@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
-require_relative 'helpers/logger'
-
 module Leetcoder
   class Download
+    include Helpers::Utils
     include Helpers::Logger
 
     def initialize(args)
       @args = args
       @question_resource = QuestionsResource.new
-      @root_directory = create_directory('leetcoder')
+      @root_directory = create_directory(args[:download_folder] || 'leetcode')
     end
 
     def self.call(args = {})
@@ -29,7 +28,7 @@ module Leetcoder
     def download_accepted_submissions
       accepted_questions.each do |question|
         question_dir = "#{question.frontendQuestionId}.#{question.titleSlug}"
-        next log_message(:skip, question_dir:) if Dir.exist? question_dir
+        next log_message(:skip, question_dir:) unless Dir.glob("#{question_dir}/*solution*").empty?
 
         log_message(:download, question_dir:)
 
@@ -41,7 +40,9 @@ module Leetcoder
     end
 
     def accepted_questions
-      QuestionsResource.new.accepted_list
+      QuestionsResource.new.accepted_list.tap do |data|
+        raise Errors::NoAcceptedQuestions if data.empty?
+      end
     end
 
     def process_question(question)
@@ -62,11 +63,6 @@ module Leetcoder
       return resource.accepted_list if args[:download_type] == Commands::DOWNLOAD_TYPE_ALL
 
       resource.uniq_accepted_list # default list
-    end
-
-    # find or create directory and returns the name
-    def create_directory(name)
-      FileUtils.mkdir_p(name).first
     end
   end
 end

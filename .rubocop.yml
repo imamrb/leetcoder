@@ -9,6 +9,7 @@ AllCops:
   Exclude:
     - vendor/**/*
     - tmp/**/*
+    - leetcode/**/*
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: space
@@ -100,4 +101,7 @@ RSpec/MultipleExpectations:
   Max: 10
 
 RSpec/RepeatedExampleGroupBody:
+  Enabled: false
+
+Gemspec/RequireMFA:
   Enabled: false

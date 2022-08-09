@@ -7,6 +7,7 @@ gemspec
 
 group :development, :test do
   gem 'awesome_print'
+  gem 'dotenv'
   gem 'pry'
   gem 'rake', '~> 13.0'
 end
