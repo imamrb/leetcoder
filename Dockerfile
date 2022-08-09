@@ -1,5 +1,4 @@
-# syntax=docker/dockerfile:1
-FROM ruby:3.1.1
+FROM ruby:3.1.1-slim
 RUN apt-get update -qq
 WORKDIR /leetcoder
 
