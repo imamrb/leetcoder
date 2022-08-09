@@ -34,8 +34,8 @@ After installing the gem, follow these steps:
  - Run `leetcode --download` to start downloading.
 
 ```bash
-leetcoder --cookie     # prompt you to save the leetcode cookie
-leetcoder --download   # start downloading
+leetcoder --cookie                    # prompt you to save the leetcode cookie
+leetcoder --download all --folder ./  # download all accepted submissions in current folder
 ```
 
 ```bash
