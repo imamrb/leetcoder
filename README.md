@@ -5,6 +5,8 @@
 A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your accepted leetcode submissions with problem description. LeetCode cookie is used for authentication.
 
 - [Leetcoder](#)
+  - [Screenshot](#screenshot)
+  - [Requirements](#requirements)
   - [Installation](#installation)
   - [Usage](#usage)
     - [Run Through Docker](#run-through-docker)
@@ -14,6 +16,10 @@ A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your
 ## Screenshot
 
 ![screenshot](./spec/cassettes/leetcoder_screenshot.png)
+
+## Requirements
+  - Ruby 3.1.1
+  - Desire to automate the boring stuff
 
 ## Installation
 
@@ -31,7 +37,7 @@ After installing the gem, follow these steps:
    ![leetcode cookie](./spec/cassettes/leetcode%20cookie.jpg)
 
  - Save your cookie by running `leetcoder --cookie` from terminal
- - Run `leetcode --download` to start downloading.
+ - Run `leetcoder --download` to start downloading.
 
 ```bash
 leetcoder --cookie                    # prompt you to save the leetcode cookie
