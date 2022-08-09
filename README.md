@@ -23,7 +23,8 @@ gem install leetcoder
 
 ## Usage
 
-After installing the gem,a
+After installing the gem, follow these steps:
+
  - Sign in to [leetcode.com](www.leetcode.com) from any browser
  - Copy the `cookie` value of a leetcode request using the browser network tab
  - Save your cookie by running `leetcoder --cookie` from terminal
@@ -34,9 +35,9 @@ leetcoder --cookie     # prompt you to save the leetcode cookie
 leetcoder --download   # start downloading
 ```
 
-`leetcoder --help`
-
 ```bash
+> leetcoder --help
+
 Usage: leetcoder [command]
 
 * indicates default value
