@@ -2,7 +2,7 @@
   <img src="./spec/cassettes/leetcoder.png" alt="leetcoder"/>
 </p>
 
-A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your accepted leetcode submissions with problem description. You will need leetcode cookie for authentication.
+A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your accepted leetcode submissions with problem description. LeetCode cookie is used for authentication.
 
 - [Leetcoder](#)
   - [Installation](#installation)
