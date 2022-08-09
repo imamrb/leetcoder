@@ -63,16 +63,16 @@ https://github.com/<username>/<repo_name>/settings/secrets/actions
 
 Then, Download and commit this [leetcoder.yml](./leetcoder.yml) file inside `.github/wrokflows/` folder in your repo.
 
-This will automatically download and commit the downloaded submissions.
-The action is set to run every week but you can customize it using the cron syntax inside the yml file.
+This will automatically download and commit the downloaded submissions every week.
+You can customize the frequency using the cron syntax inside the yml file.
 
-This is the most convenient and recommended way to backup your submissions using [leetcoder](README.md).
+This is the most convenient and recommended way to backup your submissions using the app.
 
 ## Run through Docker
 
-If you don't have ruby setup locally, you can run through docker.
+If you don't have ruby setup locally, you can run the app through docker.
 
-First, open the terminal and cd to your directory where you want to download the submissions.
+First, open terminal and cd to the directory where you want to download the submissions.
 
 Then run,
 
@@ -84,7 +84,7 @@ This will run the [leetcoder docker image](https://hub.docker.com/repository/doc
 
 The downloaded submissions will be saved to your current directory.
 
-Cavet: You will need to provide the leetcode cookie every time since the stored configuration will be lost when you will exit from docker container.
+Caveat: You will need to provide the leetcode cookie every time since the stored configuration will be lost when you exit from the container.
 
 ## Author
 
