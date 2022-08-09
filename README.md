@@ -27,6 +27,9 @@ After installing the gem, follow these steps:
 
  - Sign in to [leetcode.com](www.leetcode.com) from any browser
  - Copy the `cookie` value of a leetcode request using the browser network tab
+
+   ![leetcode cookie](./spec/cassettes/leetcode%20cookie.jpg)
+
  - Save your cookie by running `leetcoder --cookie` from terminal
  - Run `leetcode --download` to start downloading.
 
