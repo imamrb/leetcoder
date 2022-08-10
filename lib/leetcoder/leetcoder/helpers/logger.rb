@@ -15,6 +15,10 @@ module Leetcoder
           "Skipping Download for #{args[:question_dir]}. Already Exist."
         when :download
           "Downloading sumbimissions for #{args[:question_dir]}"
+        when :initiating_download
+          "Starting download in: #{args[:dir]} .."
+        when :completed_download
+          "\nDownload completed!"
         end
       end
     end

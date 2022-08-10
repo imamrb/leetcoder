@@ -17,7 +17,11 @@ module Leetcoder
 
     def call
       Dir.chdir(@root_directory) do
+        log_message(:initiating_download, dir: @root_directory)
+
         download_accepted_submissions
+
+        log_message(:completed_download)
       end
     end
 
