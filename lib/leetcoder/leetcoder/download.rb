@@ -17,7 +17,7 @@ module Leetcoder
 
     def call
       Dir.chdir(@root_directory) do
-        log_message(:initiating_download, dir: @root_directory)
+        log_message(:initiate_download, dir: @root_directory)
 
         download_accepted_submissions
 
@@ -32,9 +32,9 @@ module Leetcoder
     def download_accepted_submissions
       accepted_questions.each do |question|
         question_dir = "#{question.frontendQuestionId}.#{question.titleSlug}"
-        next log_message(:skip, question_dir:) unless Dir.glob("#{question_dir}/*solution*").empty?
+        next log_message(:skip_submission, question_dir:) unless Dir.glob("#{question_dir}/*solution*").empty?
 
-        log_message(:download, question_dir:)
+        log_message(:submission_download, question_dir:)
 
         Dir.chdir(create_directory(question_dir)) do
           process_question(question)

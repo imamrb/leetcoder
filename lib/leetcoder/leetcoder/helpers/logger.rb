@@ -11,11 +11,11 @@ module Leetcoder
 
       def message(key, args)
         case key
-        when :skip
+        when :skip_submission
           "Skipping Download for #{args[:question_dir]}. Already Exist."
-        when :download
+        when :submission_download
           "Downloading sumbimissions for #{args[:question_dir]}"
-        when :initiating_download
+        when :initiate_download
           "Starting download in location: #{File.expand_path args[:dir]}\n"
         when :completed_download
           "\nDownload completed!"
