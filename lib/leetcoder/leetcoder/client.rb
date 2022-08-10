@@ -50,7 +50,7 @@ module Leetcoder
     def retry_options
       {
         max: 2,
-        interval: 0.1,
+        interval: 2,
         interval_randomness: 0.5,
         backoff_factor: 2,
         methods: %i[get post put],

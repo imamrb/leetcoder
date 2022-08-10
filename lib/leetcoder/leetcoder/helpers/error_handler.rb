@@ -15,7 +15,7 @@ module Leetcoder
         puts "Invalid Command! #{help_toast}"
       rescue StandardError => e
         puts "error: #{e}"
-        puts e.backtrace if ENV['TEST']
+        puts e.backtrace
       end
 
       def help_toast
