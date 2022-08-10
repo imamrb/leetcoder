@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ['Imam Hossain']
   spec.email = ['imam.swe@gmail.com']
 
-  spec.summary = 'A Ruby Leetcode Client to help you download and backup all your accepted leetcode submissions'
+  spec.summary = 'A Ruby Leetcode Client to backup accepted submissions'
   spec.description = 'A Ruby Leetcode Client to download and backup your submissions with problem description'
   spec.homepage = 'https://www.github.com/imamrb/leetcoder'
   spec.license = 'MIT'
@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
-  spec.metadata['changelog_uri'] = "#{spec.homepage}/CHANGELOG.md"
+  spec.metadata['changelog_uri'] = "#{spec.homepage}/tree/v#{spec.version}/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
