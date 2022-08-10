@@ -9,8 +9,9 @@ Gem::Specification.new do |spec|
   spec.email = ['imam.swe@gmail.com']
 
   spec.summary = 'A Ruby Leetcode Client to backup accepted submissions'
-  spec.description = 'A Ruby Leetcode Client to download and backup your submissions with problem description'
   spec.homepage = 'https://www.github.com/imamrb/leetcoder'
+  spec.description = 'A Ruby Leetcode Client to download and backup your submissions with problem description.' \
+                     "Find more details with usage instructions here: #{spec.homepage}"
   spec.license = 'MIT'
   spec.required_ruby_version = ">= #{File.read('.ruby-version')}"
 

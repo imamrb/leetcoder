@@ -1,5 +1,10 @@
 ## [Released]
 
+## [1.0.0] - 2022-08-10
+
+- Stable Release
+
+
 ## [0.1.2] - 2022-08-10
 
 - Add http retry functionality
