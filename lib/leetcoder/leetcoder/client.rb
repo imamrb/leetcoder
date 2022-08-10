@@ -2,6 +2,7 @@
 
 require 'faraday'
 require 'faraday/net_http'
+require 'faraday/retry'
 
 module Leetcoder
   class Client
@@ -38,12 +39,25 @@ module Leetcoder
         f.response :json, content_type: /\bjson$/, parser_options: { symbolize_names: true }
         f.request :multipart
         f.adapter :net_http
+        f.request :retry, retry_options
       end
     end
 
     private
 
     attr_reader :cookie
+
+    def retry_options
+      {
+        max: 2,
+        interval: 0.1,
+        interval_randomness: 0.5,
+        backoff_factor: 2,
+        methods: %i[get post put],
+        exceptions: [Errno::ETIMEDOUT, Timeout::Error, Faraday::TimeoutError, Faraday::ClientError],
+        retry_statuses: [500, 429]
+      }.freeze
+    end
 
     def valid_response?(response)
       return false unless (200...299).cover?(response.status)
@@ -72,6 +86,9 @@ module Leetcoder
       when 200, 400
         raise ApiError, "status: #{response.status},\n" \
                         "code: GRAPHQL_ERROR, \nerrors: #{response.body[:errors]}"
+      when 429
+        raise ApiError, "status: #{response.status},\n" \
+                        "code: RATE_LIMIT_EXCEEDED, \nerrors: [Please try again.]"
       when 404
         raise ApiError, "status: #{response.status},\n" \
                         "code: NOT_FOUND_ERROR,\n" \
