@@ -2,7 +2,7 @@
   <img src="./spec/cassettes/leetcoder.png" alt="leetcoder"/>
 </p>
 
-A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your accepted leetcode submissions with problem description. LeetCode cookie is used for authentication.
+A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your accepted leetcode submissions with problem description. Leetcode cookie is used for authentication.
 
 - [Leetcoder](#)
   - [Screenshot](#screenshot)
@@ -11,6 +11,7 @@ A Ruby [LeetCode](https://www.leetcode.com) Client to help you download all your
   - [Usage](#usage)
     - [Run Through Docker](#run-through-docker)
     - [Run Through Github Action](#run-through-github-action)
+  - [Why this Exist](#why-this-exist)
   - [Author](#author)
 
 ## Screenshot
@@ -34,7 +35,7 @@ After installing the gem, follow these steps:
  - Sign in to [leetcode.com](www.leetcode.com) from any browser
  - Copy the `cookie` value of a leetcode request using the browser network tab
 
-   ![leetcode cookie](./spec/cassettes/leetcode%20cookie.jpg)
+   ![leetcode cookie](/spec/cassettes/leetcode%20cookie.jpg)
 
  - Save your cookie by running `leetcoder --cookie` from terminal
  - Run `leetcoder --download` to start downloading.
@@ -61,26 +62,29 @@ commands:
 
 ## Run through Github Action
 
-Create a new repository in github and set your leetcode cookie under `Repository Secrets` with name `LEETCODE_COOKIE` in
+This is the most convenient and recommended way to backup your submissions using the app.
 
-```text
-https://github.com/<username>/<repo_name>/settings/secrets/actions
-```
+- Create a new repository in github
 
-Then, Download and commit this [leetcoder.yml](./leetcoder.yml) file inside `.github/wrokflows/` folder in your repo.
+- Set your leetcode cookie under `Repository Secrets` with name `LEETCODE_COOKIE`
+
+  ```text
+  https://github.com/<username>/<repo_name>/settings/secrets/actions
+  ```
+- Download and commit this [leetcoder.yml](./leetcoder.yml) file inside `.github/wrokflows/` folder in your repo.
 
 This will automatically download and commit the downloaded submissions every week.
 You can customize the frequency using the cron syntax inside the yml file.
 
-This is the most convenient and recommended way to backup your submissions using the app.
+**Example:** https://github.com/imamrb/leetcode-solutions
 
 ## Run through Docker
 
 If you don't have ruby setup locally, you can run the app through docker.
 
-First, open terminal and cd to the directory where you want to download the submissions.
+- Open terminal and cd to the directory where you want to download the submissions.
 
-Then run,
+- Run
 
 ```bash
 docker run -it -v `pwd`:`pwd` -w `pwd` imamrb/leetcoder:latest
@@ -90,7 +94,13 @@ This will run the [leetcoder docker image](https://hub.docker.com/repository/doc
 
 The downloaded submissions will be saved to your current directory.
 
-Caveat: You will need to provide the leetcode cookie every time since the stored configuration will be lost when you exit from the container.
+**Caveat:** You will need to provide the leetcode cookie every time since the stored configuration will be lost when you exit from the container.
+
+## Why this exist
+
+Initially, I built a simple script to backup my submissions as I did not find anything similar written in Ruby. Later decided to release this as a gem since it might be useful for others. Also it was fun to built something for own use with Ruby. <3
+
+If you find this useful, give it a star. Feel free to create an issue if something doesn't work for you.
 
 ## Author
 
