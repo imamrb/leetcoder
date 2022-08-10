@@ -16,7 +16,7 @@ module Leetcoder
         when :download
           "Downloading sumbimissions for #{args[:question_dir]}"
         when :initiating_download
-          "Starting download in: #{args[:dir]} .."
+          "Starting download in location: #{File.expand_path args[:dir]}\n"
         when :completed_download
           "\nDownload completed!"
         end
