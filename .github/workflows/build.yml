@@ -1,4 +1,4 @@
-name: Build leetcoder
+name: Leetcoder Build
 on:
   push:
     branches:
