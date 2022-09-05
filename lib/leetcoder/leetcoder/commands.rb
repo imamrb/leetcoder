@@ -11,12 +11,12 @@ module Leetcoder
 
     attr_reader :options
 
-    def initialize(options = {})
+    def initialize(**options)
       @options = options
     end
 
     def run!
-      Leetcoder::Download.call(options)
+      Leetcoder::Download.call(**options)
     end
 
     def define_commands(parser) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize

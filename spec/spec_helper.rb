@@ -4,6 +4,7 @@ require 'leetcoder/leetcoder'
 
 Dir[File.join(__dir__, 'support', '**', '*.rb')].each { |f| require f }
 ENV['TEST'] = 'true'
+ENV['DEFAULT_DIR'] = 'tmp/test'
 # NOTE: Requires the actual cookie VCR_MODE=all is set
 ENV['LEETCODE_COOKIE'] = if ENV['VCR_MODE'].eql?('all')
                            ENV.fetch('LEETCODE_COOKIE')

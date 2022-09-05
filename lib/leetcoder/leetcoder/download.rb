@@ -7,11 +7,10 @@ module Leetcoder
 
     def initialize(args)
       @args = args
-      @question_resource = QuestionsResource.new
       @root_directory = create_root_directory
     end
 
-    def self.call(args = {})
+    def self.call(**args)
       new(args).call
     end
 
@@ -19,9 +18,7 @@ module Leetcoder
       Dir.chdir(@root_directory) do
         log_message(:initiate_download, dir: @root_directory)
 
-        download_accepted_submissions
-
-        log_message(:completed_download)
+        DownloadProcessor.call(**args).tap { log_message(:completed_download) }
       end
     end
 
@@ -30,55 +27,7 @@ module Leetcoder
     attr_reader :args
 
     def create_root_directory
-      create_directory(args[:download_folder] || ENV.fetch('DEFAULT_DIR', ''))
-    end
-
-    def download_accepted_submissions
-      accepted_questions.each do |question|
-        @question = question
-        next log_message(:skip_submission, question_dir:) if solutions_exist?
-
-        log_message(:submission_download, question_dir:)
-
-        Dir.chdir(create_directory(question_dir)) do
-          process_question
-          process_submissions
-        end
-      end
-    end
-
-    def accepted_questions
-      QuestionsResource.new.accepted_list.tap do |data|
-        raise Errors::NoAcceptedQuestions if data.empty?
-      end
-    end
-
-    def question_dir
-      "#{@question.frontendQuestionId}.#{@question.titleSlug}"
-    end
-
-    def solutions_exist?
-      Dir.glob("#{question_dir}/*solution*").empty?
-    end
-
-    def process_question
-      question_data = QuestionsResource.new.retrieve(@question.titleSlug)
-      Question.new(question_data).save_to_file!
-    end
-
-    def process_submissions
-      accepted_submissions.each_with_index do |sub, index|
-        submission_data = SubmissionsResource.new.retrieve(url: sub.url)
-
-        Submission.new(submission_data, index: index + 1).save_to_file!
-      end
-    end
-
-    def accepted_submissions
-      resource = SubmissionsResource.new(title_slug: @question.titleSlug)
-      return resource.accepted_list if args[:download_type] == Commands::DOWNLOAD_TYPE_ALL
-
-      resource.uniq_accepted_list # default list
+      create_directory(args[:download_folder] || ENV.fetch('DEFAULT_DIR', './'))
     end
   end
 end

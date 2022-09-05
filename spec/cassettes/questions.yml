@@ -32,7 +32,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 21 Aug 2022 09:19:16 GMT
+      - Mon, 05 Sep 2022 17:00:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -45,19 +45,14 @@ http_interactions:
       - DENY
       Set-Cookie:
       - "<Set-Cookie>"
-      - csrftoken=Z8JC08P0ezQ7GDa6hVW5s0szOqryFM3yFRrzNRDAUmLKgrp33LBwv9cWGJvlQ2dY;
-        expires=Sun, 20 Aug 2023 09:19:16 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
-        Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Content-Security-Policy:
       - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2Br54%2BLWmrbv%2FeuE8iuJy%2Bc9ZFXN3n14i5HCqy7a4TvOFI1K5zP3MHC8Ip8eGxQ7x0YRae1w%2BSboSkNgT4FmpFlux6O7CmhRYqyyVni2%2FX4fYBSNZ2Tsl4JYlBlozBw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=050SugolQ15h7%2FdTJrPTocm0gkkQUwZg1JvjP%2BKjKJI5BirsL3iPQUnudWHTkWA7sxhZ81u1PzZwwoXxP0qBjCMFIT9FseDTRbYU0VsF8qzkrowOuLj9RYPGZ%2BloAw%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       X-Content-Type-Options:
@@ -65,20 +60,20 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73e249368c7a87f5-SIN
+      - 746085b73d39a8dd-PBH
     body:
       encoding: ASCII-8BIT
-      string: '{"data":{"problemsetQuestionList":{"total":2159,"questions":[{"acRate":48.99428474273525,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"1","isFavor":false,"paidOnly":false,"status":null,"title":"Two
+      string: '{"data":{"problemsetQuestionList":{"total":2173,"questions":[{"acRate":49.044660539993686,"difficulty":"Easy","freqBar":null,"frontendQuestionId":"1","isFavor":false,"paidOnly":false,"status":"ac","title":"Two
         Sum","titleSlug":"two-sum","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Hash
-        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":39.31722190028556,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"2","isFavor":false,"paidOnly":false,"status":null,"title":"Add
-        Two Numbers","titleSlug":"add-two-numbers","topicTags":[{"name":"Linked List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Math","id":"VG9waWNUYWdOb2RlOjg=","slug":"math"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":33.623615523269955,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"3","isFavor":false,"paidOnly":false,"status":null,"title":"Longest
+        Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":39.4205506988321,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"2","isFavor":false,"paidOnly":false,"status":"ac","title":"Add
+        Two Numbers","titleSlug":"add-two-numbers","topicTags":[{"name":"Linked List","id":"VG9waWNUYWdOb2RlOjc=","slug":"linked-list"},{"name":"Math","id":"VG9waWNUYWdOb2RlOjg=","slug":"math"},{"name":"Recursion","id":"VG9waWNUYWdOb2RlOjMx","slug":"recursion"}],"hasSolution":true,"hasVideoSolution":false},{"acRate":33.66792933957646,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"3","isFavor":false,"paidOnly":false,"status":"ac","title":"Longest
         Substring Without Repeating Characters","titleSlug":"longest-substring-without-repeating-characters","topicTags":[{"name":"Hash
         Table","id":"VG9waWNUYWdOb2RlOjY=","slug":"hash-table"},{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Sliding
-        Window","id":"VG9waWNUYWdOb2RlOjU1ODIx","slug":"sliding-window"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":34.783927878738176,"difficulty":"Hard","freqBar":null,"frontendQuestionId":"4","isFavor":false,"paidOnly":false,"status":null,"title":"Median
+        Window","id":"VG9waWNUYWdOb2RlOjU1ODIx","slug":"sliding-window"}],"hasSolution":true,"hasVideoSolution":true},{"acRate":34.88307714236082,"difficulty":"Hard","freqBar":null,"frontendQuestionId":"4","isFavor":false,"paidOnly":false,"status":null,"title":"Median
         of Two Sorted Arrays","titleSlug":"median-of-two-sorted-arrays","topicTags":[{"name":"Array","id":"VG9waWNUYWdOb2RlOjU=","slug":"array"},{"name":"Binary
         Search","id":"VG9waWNUYWdOb2RlOjEx","slug":"binary-search"},{"name":"Divide
-        and Conquer","id":"VG9waWNUYWdOb2RlOjEy","slug":"divide-and-conquer"}],"hasSolution":false,"hasVideoSolution":false},{"acRate":32.30535937132804,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"5","isFavor":false,"paidOnly":false,"status":null,"title":"Longest
+        and Conquer","id":"VG9waWNUYWdOb2RlOjEy","slug":"divide-and-conquer"}],"hasSolution":false,"hasVideoSolution":false},{"acRate":32.335330553702626,"difficulty":"Medium","freqBar":null,"frontendQuestionId":"5","isFavor":false,"paidOnly":false,"status":null,"title":"Longest
         Palindromic Substring","titleSlug":"longest-palindromic-substring","topicTags":[{"name":"String","id":"VG9waWNUYWdOb2RlOjEw","slug":"string"},{"name":"Dynamic
         Programming","id":"VG9waWNUYWdOb2RlOjEz","slug":"dynamic-programming"}],"hasSolution":true,"hasVideoSolution":false}]}}}'
-  recorded_at: Sun, 21 Aug 2022 09:19:16 GMT
+  recorded_at: Mon, 05 Sep 2022 17:00:39 GMT
 recorded_with: VCR 6.1.0

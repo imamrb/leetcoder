@@ -30,7 +30,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 21:43:05 GMT
+      - Mon, 05 Sep 2022 17:00:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -43,19 +43,14 @@ http_interactions:
       - DENY
       Set-Cookie:
       - "<Set-Cookie>"
-      - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
-        expires=Wed, 02 Aug 2023 21:43:04 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
-        Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Content-Security-Policy:
       - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7lMhbOku4t2KYGvThJD1i18fH5N2P0K1KN0QruxRxYN%2BXuqQVxLuJINrVU%2BxjnLp8Tp%2FNY9cUixedl6JCEV59fcT2SbbghfvKYn%2Bn%2BHJ96qb2Fs69ENCP4cz6Qs7vA%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GwPWOoNycyVh75LHPymn%2FMe3hslfWsg34GoltdawDw09t1vzAVGzessZxCC3TaRjO1SJwN4%2FPt2oudfCmZjMA%2Fou4RY%2FcCEfYo505QPB7van5vOII%2Fg%2BFt3BG47M6Q%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       X-Content-Type-Options:
@@ -63,7 +58,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73523a0edaed9f7d-SIN
+      - 746085ababc8a8dd-PBH
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"question":{"questionId":"1","title":"Two Sum","titleSlug":"two-sum","content":"<p>Given
@@ -83,9 +78,9 @@ http_interactions:
         answer exists.</strong></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:&nbsp;</strong>Can
         you come up with an algorithm that is less than&nbsp;<code>O(n<sup>2</sup>)&nbsp;</code>time
         complexity?","difficulty":"Easy","categoryTitle":"Algorithms","stats":"{\"totalAccepted\":
-        \"7.3M\", \"totalSubmission\": \"15M\", \"totalAcceptedRaw\": 7345219, \"totalSubmissionRaw\":
-        15016371, \"acRate\": \"48.9%\"}","topicTags":[{"name":"Array","slug":"array","translatedName":null},{"name":"Hash
-        Table","slug":"hash-table","translatedName":null}],"likes":35638,"dislikes":1132,"isLiked":null,"similarQuestions":"[{\"title\":
+        \"7.7M\", \"totalSubmission\": \"15.6M\", \"totalAcceptedRaw\": 7672070, \"totalSubmissionRaw\":
+        15643032, \"acRate\": \"49.0%\"}","topicTags":[{"name":"Array","slug":"array","translatedName":null},{"name":"Hash
+        Table","slug":"hash-table","translatedName":null}],"likes":37240,"dislikes":1186,"isLiked":null,"similarQuestions":"[{\"title\":
         \"3Sum\", \"titleSlug\": \"3sum\", \"difficulty\": \"Medium\", \"translatedTitle\":
         null}, {\"title\": \"4Sum\", \"titleSlug\": \"4sum\", \"difficulty\": \"Medium\",
         \"translatedTitle\": null}, {\"title\": \"Two Sum II - Input Array Is Sorted\",
@@ -110,6 +105,14 @@ http_interactions:
         Letter to Appear Twice\", \"titleSlug\": \"first-letter-to-appear-twice\",
         \"difficulty\": \"Easy\", \"translatedTitle\": null}, {\"title\": \"Number
         of Excellent Pairs\", \"titleSlug\": \"number-of-excellent-pairs\", \"difficulty\":
-        \"Hard\", \"translatedTitle\": null}]","exampleTestcases":"[2,7,11,15]\n9\n[3,2,4]\n6\n[3,3]\n6"}}}'
-  recorded_at: Wed, 03 Aug 2022 21:43:05 GMT
+        \"Hard\", \"translatedTitle\": null}, {\"title\": \"Number of Arithmetic Triplets\",
+        \"titleSlug\": \"number-of-arithmetic-triplets\", \"difficulty\": \"Easy\",
+        \"translatedTitle\": null}, {\"title\": \"Node With Highest Edge Score\",
+        \"titleSlug\": \"node-with-highest-edge-score\", \"difficulty\": \"Medium\",
+        \"translatedTitle\": null}, {\"title\": \"Check Distances Between Same Letters\",
+        \"titleSlug\": \"check-distances-between-same-letters\", \"difficulty\": \"Easy\",
+        \"translatedTitle\": null}, {\"title\": \"Find Subarrays With Equal Sum\",
+        \"titleSlug\": \"find-subarrays-with-equal-sum\", \"difficulty\": \"Easy\",
+        \"translatedTitle\": null}]","exampleTestcases":"[2,7,11,15]\n9\n[3,2,4]\n6\n[3,3]\n6"}}}'
+  recorded_at: Mon, 05 Sep 2022 17:00:37 GMT
 recorded_with: VCR 6.1.0

@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 # Dir[File.join(__dir__, 'leetcoder', '**', '*.rb')].each { |file| require file }
-
+require 'dotenv/load'
 require 'base64'
 require 'fileutils'
 require 'nokogiri'
 require 'yaml'
+require 'pry'
 require_relative 'leetcoder/version'
 require_relative 'leetcoder/client'
 require_relative 'leetcoder/collection'
@@ -21,6 +22,7 @@ require_relative 'leetcoder/objects/question'
 require_relative 'leetcoder/resources/base_resource'
 require_relative 'leetcoder/resources/questions'
 require_relative 'leetcoder/resources/submissions'
+require_relative 'leetcoder/download_processor'
 require_relative 'leetcoder/download'
 require_relative 'leetcoder/commands'
 require_relative 'leetcoder/cli'

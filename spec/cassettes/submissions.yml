@@ -29,7 +29,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 03 Aug 2022 21:43:02 GMT
+      - Mon, 05 Sep 2022 17:00:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -42,19 +42,14 @@ http_interactions:
       - DENY
       Set-Cookie:
       - "<Set-Cookie>"
-      - csrftoken=4aB11vYKo8xT6aa9fWmQy1G67lLnzA2iSoFmostuBgEXHtuBmWJwE3hxkolwtcZo;
-        expires=Wed, 02 Aug 2023 21:43:02 GMT; Max-Age=31449600; Path=/; SameSite=Lax;
-        Secure
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Content-Security-Policy:
       - frame-ancestors 'self' https://*.leetcode.com https://leetcode.com https://www.growingio.com
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RLtJoAsemnMgpta7omVxWHlMel%2FZ48yz2BE0bcO%2B5gj4msS25TKF2iUNxQwEJzlZiy%2Fm8I7Ldg9zzwaz39cNUJ6AdSg5YMsaJQSrNgTT%2BICOQ8auEByddfmDoN5uHg%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9fJPDFsc%2FnjSDWsu7CJZiZtbXcPnD78g3tj6IL2xt%2BS5I2d4Cuz%2B4MinXr09dF892znfSAwea0czxbX9zmCBWOYYjukL%2F4tpWWgxIVJVLOH6lJPyJRy6MPmEuDQR1g%3D%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       X-Content-Type-Options:
@@ -62,7 +57,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73523a01bc7a87d2-SIN
+      - 746085d3c94fa8d6-PBH
     body:
       encoding: ASCII-8BIT
       string: '{"data":{"submissionList":{"lastKey":null,"hasNext":false,"submissions":[{"id":"641132932","statusDisplay":"Accepted","lang":"ruby","runtime":"127
@@ -75,5 +70,5 @@ http_interactions:
         Pending","memory":"9.4 MB"},{"id":"429869587","statusDisplay":"Accepted","lang":"cpp","runtime":"16
         ms","timestamp":"1607784616","url":"/submissions/detail/429869587/","isPending":"Not
         Pending","memory":"9.3 MB"}]}}}'
-  recorded_at: Wed, 03 Aug 2022 21:43:03 GMT
+  recorded_at: Mon, 05 Sep 2022 17:00:44 GMT
 recorded_with: VCR 6.1.0
